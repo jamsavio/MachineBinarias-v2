@@ -26,14 +26,14 @@ class Model():
 		return predicted
 
 
-	def get_next_n_predictions(self, data, n):
+	def get_next_n_predictions(self, data, n, verbose=False):
 		'''
 		Get a window of the next n predicted data
 		'''
 		predictions = []
 		
 		for p in range(n):
-			predicted_data = self.model.predict(data)
+			predicted_data = self.model.predict(data, verbose=verbose)
 
 			tmp_predictions = []
 
